@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
@@ -13,4 +12,3 @@ wget https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_
 dpkg -i cuda-keyring_1.0-1_all.deb
 apt-get update
 apt-get install -y nvidia-driver-535-server nvidia-container-toolkit
-

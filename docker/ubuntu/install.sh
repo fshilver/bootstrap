@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 if [ $UID -ne 0 ]; then
     echo_error "Please run as root"
